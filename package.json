@@ -1,0 +1,28 @@
+{
+  "name": "studio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "app": "tsc && node dist/cli.js",
+    "server": "tsc && node dist/server.js",
+    "dev": "concurrently \"tsc && node dist/server.js\" \"cd webapp && pnpm dev\""
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "^3.995.0",
+    "@types/node": "^25.3.0",
+    "cors": "^2.8.5",
+    "dd-trace": "^5.87.0",
+    "dotenv": "^17.3.1",
+    "express": "^5.1.0",
+    "p-limit": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "concurrently": "^9.1.2",
+    "typescript": "^5.5.3"
+  },
+  "private": true
+}
